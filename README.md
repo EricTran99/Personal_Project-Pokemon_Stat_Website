@@ -20,3 +20,9 @@ pprint(data)
 pprint(data['stats'][1]['stat'])
 
 ```
+## What is in the website?
+The wesbite will contain the image of the request pokemon, which will be extracted from the bubliopedia website with jpg. <br/>
+a box description of the pokemon and the name <br/>
+a bar graph that showcase the base stat of the pokemon, each will be represented with the specific colour just like in the pokemon game. <br/>
+ <br/>
+there may be further addition to the website such as animation or smooth transition. These will be edited through CSS.
