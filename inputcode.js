@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 let myChart;
 
@@ -46,6 +47,8 @@ function displayStatsChart(pokemonData) {
     });
 }
 
+=======
+>>>>>>> 7410dc78f00a259f4d6d7c43e8f6317fe972ddce
 function ExtractPokemonData() {
     const inputElement = document.getElementById("pokemonIdInput");
     const userInput = inputElement.value;
@@ -65,6 +68,7 @@ function ExtractPokemonData() {
                     base_stat: stat.base_stat
                 }))
             };
+<<<<<<< HEAD
 
             
             // console.log(pokemonData);
@@ -124,3 +128,9 @@ function updateStatsChart(pokemonData) {
     });
     }
 }
+=======
+            console.log(pokemonData);
+        })
+        .catch(error => console.error('Error fetching data:', error));
+}
+>>>>>>> 7410dc78f00a259f4d6d7c43e8f6317fe972ddce
