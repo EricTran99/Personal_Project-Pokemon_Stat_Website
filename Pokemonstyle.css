@@ -1,0 +1,11 @@
+body {
+    background: linear-gradient(to right, rgba(40, 240, 0, 0.5), rgba(255, 255, 255, 0.8));
+    margin: 2%;
+}
+
+#pokemonStatsChart{
+    margin-left: 40%;
+    max-height: 770px;
+    color:aquamarine;
+    font-family: monospace;
+}

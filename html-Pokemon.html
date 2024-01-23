@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Stat</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="Pokemonstyle.css">
+</head>
+
+<body>
+    <h1>this is a test</h1>
+    <p1>in this there will be several sections,
+        one is an image box of the pokemon
+        second is the bar chart of all of its stats
+        third a box describing the pokemon
+    </p1>
+    
+    <label for="pokemonIdInput">Enter Pokemon ID:</label>
+    <input type="text" id="pokemonIdInput">
+    <button onclick="ExtractPokemonData()">Fetch Pokemon</button>
+    <script type="text/javascript" src="inputcode.js"></script>
+
+    <canvas id="pokemonStatsChart" width="10" height="10"></canvas>
+</body>
+</html>
