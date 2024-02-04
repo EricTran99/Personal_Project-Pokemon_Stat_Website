@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 let myChart;
 
@@ -47,8 +46,6 @@ function displayStatsChart(pokemonData) {
     });
 }
 
-=======
->>>>>>> 7410dc78f00a259f4d6d7c43e8f6317fe972ddce
 function ExtractPokemonData() {
     const inputElement = document.getElementById("pokemonIdInput");
     const userInput = inputElement.value;
@@ -66,13 +63,16 @@ function ExtractPokemonData() {
                 stats: data.stats.map(stat => ({
                     name: stat.stat.name,
                     base_stat: stat.base_stat
-                }))
+                })),
+                sprite: data.sprites.front_default,
+                pokedexInfo: data.species.url
             };
-<<<<<<< HEAD
 
             
             // console.log(pokemonData);
             updateStatsChart(pokemonData);
+            pokemonimagedisplay(pokemonData.sprite);
+            PokedexInformation(pokemonData.pokedexInfo)
         })
         .catch(error => console.error('Error fetching data:', error));
 }
@@ -128,9 +128,38 @@ function updateStatsChart(pokemonData) {
     });
     }
 }
-=======
-            console.log(pokemonData);
-        })
-        .catch(error => console.error('Error fetching data:', error));
+
+function pokemonimagedisplay(spriteURL) {
+    const pokemonImage = document.getElementById("pokemonImage");
+    pokemonImage.src = spriteURL;
 }
->>>>>>> 7410dc78f00a259f4d6d7c43e8f6317fe972ddce
+
+function PokedexInformation(pokedexextract) {
+    console.log('Fetching Pokédex data from:', pokedexextract);
+
+    fetch(pokedexextract)
+        .then(response => response.json())
+        .then(data => {
+            const pokedexData = {
+                description: data.flavor_text_entries.find(entry => entry.language.name === 'en').flavor_text
+            };
+            // console.log('Pokedex Data', pokedexData);
+
+            // Display Pokédex information
+            displayPokedexInfo(pokedexData);
+        })
+        .catch(error => console.error('Error fetching Pokédex information:', error));
+}
+
+function displayPokedexInfo(pokedexData) {
+    const pokedexDataElement = document.getElementById("pokedexData");
+    
+    // Replace \f with \n in the description
+    const formattedDescription = pokedexData.description.replace(/\f/g, '\n');
+
+    // Apply text alignment based on content length
+    pokedexDataElement.style.textAlign = formattedDescription.length > 100 ? 'justify' : 'left';
+    
+    // Update the content with the formatted description
+    pokedexDataElement.textContent = formattedDescription;
+}

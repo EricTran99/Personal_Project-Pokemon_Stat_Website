@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Stat</title>
-<<<<<<< HEAD
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" type="text/css" href="Pokemonstyle.css">
-=======
-
->>>>>>> 7410dc78f00a259f4d6d7c43e8f6317fe972ddce
 </head>
 
 <body>
@@ -20,14 +16,22 @@
         third a box describing the pokemon
     </p1>
     
-    <label for="pokemonIdInput">Enter Pokemon ID:</label>
-    <input type="text" id="pokemonIdInput">
-    <button onclick="ExtractPokemonData()">Fetch Pokemon</button>
-    <script type="text/javascript" src="inputcode.js"></script>
-<<<<<<< HEAD
+    <div id="pokemonContainer">
+        <img id="pokemonImage" alt="Pokemon Sprite">
+        <canvas id="pokemonStatsChart"></canvas>
+    </div>
+    <div id="inputContainer">
+        <label for="pokemonIdInput">Enter Pokemon ID:</label>
+        <input type="text" id="pokemonIdInput">
+        <button onclick="ExtractPokemonData()">Fetch Pokemon</button>
+    </div>
 
-    <canvas id="pokemonStatsChart" width="10" height="10"></canvas>
-=======
->>>>>>> 7410dc78f00a259f4d6d7c43e8f6317fe972ddce
+    <!-- Corrected the closing tag here -->
+    <div id="pokedexInfo">
+        <p id="pokedexData">POKEDEX information</p>
+    </div>
+    
+    <script type="text/javascript" src="inputcode.js"></script>
+
 </body>
 </html>
